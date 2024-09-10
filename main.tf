@@ -21,6 +21,6 @@ resource "azurerm_storage_account" "mate-terraform-sa" {
 
   tags = {
     environment = "Staging"
-    owner = local.owner
+    owner       = local.owner
   }
 }
