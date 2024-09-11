@@ -8,19 +8,16 @@ terraform {
 }
 
 resource "azurerm_resource_group" "mate-terraform-rg" {
-  name     = "mate-terraform-resources"
+  name     = var.resource_group_name
   location = var.location
 }
 
 resource "azurerm_storage_account" "mate-terraform-sa" {
-  name                     = "mateterraformstorage"
+  name                     = var.storage_account_name
   resource_group_name      = azurerm_resource_group.mate-terraform-rg.name
   location                 = azurerm_resource_group.mate-terraform-rg.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  tags = {
-    environment = "Staging"
-    owner       = local.owner
-  }
+  tags = var.tags
 }

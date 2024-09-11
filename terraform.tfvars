@@ -1,0 +1,5 @@
+resource_group_name  = "mate-terraform-resources"
+location             = "WestUS"
+storage_account_name = "mateterraformstorage"
+container_name       = "container_example"
+blob_name            = "blob_example"

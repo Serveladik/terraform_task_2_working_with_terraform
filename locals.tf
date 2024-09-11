@@ -1,3 +1,0 @@
-locals {
-  owner = "XtheCutter"
-}
